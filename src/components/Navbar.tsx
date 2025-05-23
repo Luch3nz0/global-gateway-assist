@@ -23,6 +23,9 @@ export const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             <div className="flex items-center space-x-6">
+              <Link to="/onboarding" className="text-gray-600 hover:text-gray-900 transition-colors">
+                Get Started
+              </Link>
               <Link to="/services" className="text-gray-600 hover:text-gray-900 transition-colors">
                 Services
               </Link>
@@ -42,7 +45,7 @@ export const Navbar = () => {
                 <Link to="/login">Sign In</Link>
               </Button>
               <Button size="sm" className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700" asChild>
-                <Link to="/signup">Get Started</Link>
+                <Link to="/dashboard">Dashboard</Link>
               </Button>
             </div>
           </div>
@@ -60,22 +63,49 @@ export const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
-              <Link to="/services" className="text-gray-600 hover:text-gray-900 transition-colors">
+              <Link 
+                to="/onboarding" 
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Get Started
+              </Link>
+              <Link 
+                to="/services" 
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Services
               </Link>
-              <Link to="/partners" className="text-gray-600 hover:text-gray-900 transition-colors">
+              <Link 
+                to="/partners" 
+                className="text-gray-600 hover:text-gray-900 transition-colors" 
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Partners
               </Link>
-              <Link to="/about" className="text-gray-600 hover:text-gray-900 transition-colors">
+              <Link 
+                to="/about" 
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 About
               </Link>
               <div className="pt-2 border-t border-gray-200">
                 <div className="flex flex-col space-y-2">
-                  <Button variant="outline" size="sm" asChild>
-                    <Link to="/login">Sign In</Link>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    asChild
+                  >
+                    <Link to="/login" onClick={() => setIsMenuOpen(false)}>Sign In</Link>
                   </Button>
-                  <Button size="sm" className="bg-gradient-to-r from-blue-600 to-green-600" asChild>
-                    <Link to="/signup">Get Started</Link>
+                  <Button 
+                    size="sm" 
+                    className="bg-gradient-to-r from-blue-600 to-green-600" 
+                    asChild
+                  >
+                    <Link to="/dashboard" onClick={() => setIsMenuOpen(false)}>Dashboard</Link>
                   </Button>
                 </div>
               </div>

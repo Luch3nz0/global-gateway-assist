@@ -34,7 +34,7 @@ export const HeroSection = () => {
                 className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-lg px-8 py-6"
                 asChild
               >
-                <Link to="/signup">
+                <Link to="/onboarding">
                   Start Your Journey <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
