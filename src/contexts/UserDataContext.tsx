@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 export type UserData = {
@@ -10,6 +9,7 @@ export type UserData = {
   serviceNeeds: string[];
   documents: { id: string; name: string; status: 'pending' | 'approved' | 'rejected' }[];
   nextSteps: { id: string; task: string; completed: boolean }[];
+  additionalInfo?: string;
 };
 
 type UserDataContextType = {
