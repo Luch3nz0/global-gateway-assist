@@ -9,12 +9,12 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base:"/global-gateway-assist",
   plugins: [
     react(),
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
+  base: "/global-gateway-assist",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
